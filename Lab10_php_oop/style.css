@@ -1,0 +1,109 @@
+:root{
+  --pink-50: #fff0f6;
+  --pink-100: #ffd6e8;
+  --pink-300: #ff85c0;
+  --pink-500: #ff2d7f;
+  --pink-700: #c01f59;
+  --muted: #6b6b6b;
+  --card-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  --radius: 12px;
+  --font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+  font-family:var(--font-family);
+  background: linear-gradient(180deg, var(--pink-50) 0%, #fff 60%);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+  max-width:760px;
+  margin:36px auto;
+  padding:20px;
+}
+
+.card{
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  padding:20px;
+  border: 1px solid rgba(255,45,127,0.08);
+}
+
+h1, h2, h3{
+  margin:8px 0 14px 0;
+  color:var(--pink-700);
+}
+
+form table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:6px;
+}
+form td{ padding:8px 6px; vertical-align:middle; }
+
+form td:first-child{
+  width:28%;
+  text-align:right;
+  padding-right:16px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+input[type="text"], textarea{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid rgba(255,45,127,0.15);
+  border-radius:8px;
+  outline:none;
+  transition: box-shadow .12s ease, border-color .12s ease;
+  font-size:14px;
+}
+input[type="text"]:focus, textarea:focus{
+  box-shadow: 0 6px 20px rgba(255,45,127,0.12);
+  border-color:var(--pink-500);
+}
+
+input[type="submit"]{
+  display:inline-block;
+  padding:10px 18px;
+  border:none;
+  border-radius:10px;
+  background: linear-gradient(180deg, var(--pink-300), var(--pink-500));
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow: 0 6px 18px rgba(255,45,127,0.18);
+}
+input[type="submit"]:hover{
+  transform:translateY(-1px);
+  box-shadow: 0 10px 30px rgba(255,45,127,0.22);
+}
+
+.submitted {
+  margin-top:16px;
+  background:var(--pink-50);
+  border:1px solid rgba(255,45,127,0.06);
+  padding:12px;
+  border-radius:8px;
+}
+
+.info {
+  margin-top:14px;
+  padding:12px;
+  border-radius:8px;
+  background: linear-gradient(90deg, rgba(255,45,127,0.06), rgba(255,45,127,0.02));
+  border:1px solid rgba(255,45,127,0.06);
+  color:var(--pink-700);
+  font-weight:600;
+}
+
+@media (max-width:560px){
+  form td:first-child{ display:block; text-align:left; padding-right:0; margin-bottom:6px; }
+  form td:last-child{ display:block; }
+}
